@@ -1,27 +1,4 @@
-require 'spec_helper'
 
-describe 'hashketball' do
-
-  describe '#game_hash' do
-    let(:top_level_keys) { [:home, :away] }
-    let(:team_level_keys) { [:team_name, :colors, :players] }
-
-    it 'returns a hash' do
-      expect(game_hash).to be_a(Hash)
-    end
-
-    it 'returns the correct top-level keys' do
-      top_level_keys.each do |key|
-        expect(game_hash.keys).to include(key)
-      end
-    end
-
-    it 'returns the correct team-level keys' do
-      team_level_keys.each do |key|
-        expect(game_hash.values.first.keys).to include(key)
-      end
-    end
-  end
 
   describe '#num_points_scored' do
 
